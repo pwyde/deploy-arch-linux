@@ -1,0 +1,24 @@
+##
+## Arch Linux repository mirrorlist.
+##
+
+## Sweden
+#Server = https://archlinux.dynamict.se/$repo/os/$arch
+Server = https://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch
+Server = https://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch
+Server = https://mirror.osbeck.com/archlinux/$repo/os/$arch
+Server = https://ftp.acc.umu.se/mirror/archlinux/$repo/os/$arch
+
+## Norway
+Server = http://mirror.terrahost.no/linux/archlinux/$repo/os/$arch
+Server = http://mirror.archlinux.no/$repo/os/$arch
+Server = http://archlinux.uib.no/$repo/os/$arch
+Server = http://mirror.neuf.no/archlinux/$repo/os/$arch
+
+## Finland
+Server = http://arch.mirror.far.fi/$repo/os/$arch
+Server = http://mirror.pseudoform.org/$repo/os/$arch
+
+## Denmark
+Server = http://mirrors.dotsrc.org/archlinux/$repo/os/$arch
+Server = http://mirror.one.com/archlinux/$repo/os/$arch
