@@ -1,0 +1,8 @@
+[Unit]
+Description=Copy kernel and initramfs image to EFI system partition
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cp -af /boot/vmlinuz-linux /efi/EFI/Linux/
+ExecStart=/usr/bin/cp -af /boot/initramfs-linux.img /efi/EFI/Linux/
+ExecStart=/usr/bin/cp -af /boot/initramfs-linux-fallback.img /efi/EFI/Linux/ 
