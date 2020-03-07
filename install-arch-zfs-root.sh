@@ -131,7 +131,7 @@ ${white}Preperation:${no_color}
   # pacman -S --noconfirm git
 
   Download Git repository.
-  # git clone https://gitlab.com/pwyde/$git_repo.git
+  # git clone https://github.com/pwyde/$git_repo.git
   # cd $git_repo
 
 ${white}Usage:${no_color}

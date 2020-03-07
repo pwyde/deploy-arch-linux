@@ -84,7 +84,7 @@ Install **Git**.
 
 Download Git repository.
 ```
-# git clone https://gitlab.com/pwyde/deploy-arch-linux.git
+# git clone https://github.com/pwyde/deploy-arch-linux.git
 # cd deploy-arch-linux
 ```
 
