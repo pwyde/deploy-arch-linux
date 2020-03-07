@@ -162,7 +162,7 @@ config_pacman() {
     sed -i "s/#\[multilib\]/[multilib]/" /etc/pacman.conf
     sed -i "/\[multilib\]$/{n;s/^#//;}" /etc/pacman.conf
     print_msg "Configured pacman..."
-    print_msg "initializing and refreshing the pacman keyring..."
+    print_msg "Initializing and refreshing the pacman keyring..."
     pacman-key --init > /dev/null 2>&1
     pacman-key --populate archlinux > /dev/null 2>&1
     pacman-key --refresh-keys > /dev/null 2>&1
