@@ -125,6 +125,7 @@ Script performs the following configuration changes:
 - Configure console colors.
 - Configure file and inode limits.
 - Configure journal size limit.
+- Configure swappiness.
 - Disable core dumps.
 - Set a timeout for sudo sessions.
 - Set lockout after failed login attempts.
