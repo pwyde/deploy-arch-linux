@@ -62,6 +62,7 @@ ${white}Description:${no_color}
     - Configure console colors.
     - Configure file and inode limits.
     - Configure journal size limit.
+    - Configure swappiness.
     - Disable core dumps.
     - Set a timeout for sudo sessions.
     - Set lockout after failed login attempts.
@@ -277,6 +278,12 @@ EOF
     print_msg "Disabled core dumps..."
 }
 
+config_swappiness() {
+    # Configure swappiness.
+    cp --force "${script_dir}"/etc/sysctl.d/50-vm.conf /etc/sysctl.d/50-vm.conf
+    print_msg "Configured swappiness..."
+}
+
 secure_sudo_timeout() {
     cat >> /etc/sudoers <<EOF
 
@@ -377,6 +384,7 @@ if [[ "${configure}" == true ]]; then
     config_file_inode_limits
     config_journal_size
     config_core_dumps
+    config_swappiness
     echo
     echo -e "${cyan}""Performing security configuration...""${no_color}"
     echo
