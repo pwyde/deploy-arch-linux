@@ -182,7 +182,7 @@ ${white}Options:${no_color}
   ${cyan}-p${no_color}, ${cyan}--post-install${no_color}  Performs post-installation configuration. This option
                       is only used when performing configuration in the chroot
                       environment. Should NOT be used when executing script.
-" >&2
+" >&1
 }
 
 # Print help if no argument is specified.
@@ -215,7 +215,7 @@ print_msg() {
 }
 
 print_error() {
-    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&1
+    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&2
 }
 
 test_run_as_root() {
