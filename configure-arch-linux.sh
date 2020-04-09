@@ -93,7 +93,7 @@ ${white}Options:${no_color}
   ${cyan}-c${no_color}, ${cyan}--configure${no_color}       Apply system configuration and hardening included in script.
 
   ${cyan}-a${no_color}, ${cyan}--aur-helper${no_color}      Install preferred AUR helper (yay).
-" >&2
+" >&1
 }
 
 # Print help if no argument is specified.
@@ -126,7 +126,7 @@ print_msg() {
 }
 
 print_error() {
-    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&1
+    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&2
 }
 
 test_run_as_root() {
