@@ -128,14 +128,12 @@ Script performs the following configuration changes:
 - Configure swappiness.
 - Disable core dumps.
 - Set a timeout for sudo sessions.
-- Set lockout after failed login attempts.
 - TCP/IP stack hardening.
 - Restrict access to kernel logs.
 - Disable Speck kernel module.
 - Secure kernel pointers in /proc filesystem.
 - Restrict access to ptrace.
 - Hide PIDs.
-- Disable the root password.
 
 Script can also automatically install [`yay`](https://aur.archlinux.org/packages/yay/) as the preferred AUR helper if the `--aur-helper` option is specified (optional).
 

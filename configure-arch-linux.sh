@@ -65,14 +65,12 @@ ${white}Description:${no_color}
     - Configure swappiness.
     - Disable core dumps.
     - Set a timeout for sudo sessions.
-    - Set lockout after failed login attempts.
     - TCP/IP stack hardening.
     - Restrict access to kernel logs.
     - Disable Speck kernel module.
     - Secure kernel pointers in /proc filesystem.
     - Restrict access to ptrace.
     - Hide PIDs.
-    - Disable the root password.
 
 Script can also automatically install 'yay' as the preferred AUR helper if the
 '--aur-helper' option is specified (optional).
@@ -293,11 +291,6 @@ EOF
     print_msg "Configured sudo session timeout..."
 }
 
-secure_pam() {
-    # Lockout user after three failed login attempts
-    sed -i "s:onerr=succeed file=/var/log/tallylog:deny=3 unlock_time=600 onerr=succeed file=/var/log/tallylog:" /etc/pam.d/system-login
-}
-
 secure_tcpip_stack() {
     # TCP/IP stack hardening.
     cp --force "${script_dir}"/etc/sysctl.d/40-ipv4.conf /etc/sysctl.d/40-ipv4.conf
@@ -341,12 +334,6 @@ secure_pid() {
     cp --force "${script_dir}"/etc/systemd/system/systemd-logind.service.d/hidepid.conf /etc/systemd/system/systemd-logind.service.d/hidepid.conf
     usermod -aG proc "${username}"
     print_msg "Secured PIDs..."
-}
-
-secure_root_login() {
-    # Disable the root password.
-    usermod -p '*' root
-    print_msg "Disabled root password..."
 }
 
 install_aur_helper() {
