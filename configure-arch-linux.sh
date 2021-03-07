@@ -72,7 +72,7 @@ ${white}Description:${no_color}
     - Restrict access to ptrace.
     - Hide PIDs.
 
-Script can also automatically install 'yay' as the preferred AUR helper if the
+Script can also automatically install 'paru' as the preferred AUR helper if the
 '--aur-helper' option is specified (optional).
 
 ${white}Disclaimer:${no_color}
@@ -90,7 +90,7 @@ ${white}Disclaimer:${no_color}
 ${white}Options:${no_color}
   ${cyan}-c${no_color}, ${cyan}--configure${no_color}       Apply system configuration and hardening included in script.
 
-  ${cyan}-a${no_color}, ${cyan}--aur-helper${no_color}      Install preferred AUR helper (yay).
+  ${cyan}-a${no_color}, ${cyan}--aur-helper${no_color}      Install preferred AUR helper (paru).
 " >&1
 }
 
@@ -343,11 +343,11 @@ install_aur_helper() {
     print_msg "Installing AUR helper as user '${username}'..."
     sudo --set-home --user "${username}" --shell /bin/bash <<'EOF'
 cd "${HOME}"
-git clone https://aur.archlinux.org/yay.git
-cd "${HOME}"/yay
+git clone https://aur.archlinux.org/paru.git
+cd "${HOME}"/paru
 makepkg PKGBUILD --skippgpcheck --install --noconfirm
 cd "${HOME}"
-rm -rf "${HOME}"/yay
+rm -rf "${HOME}"/paru
 EOF
 }
 

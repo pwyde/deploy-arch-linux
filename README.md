@@ -135,13 +135,13 @@ Script performs the following configuration changes:
 - Restrict access to ptrace.
 - Hide PIDs.
 
-Script can also automatically install [`yay`](https://aur.archlinux.org/packages/yay/) as the preferred AUR helper if the `--aur-helper` option is specified (optional).
+Script can also automatically install [`paru`](https://aur.archlinux.org/packages/paru/) as the preferred AUR helper if the `--aur-helper` option is specified (optional).
 
 ### Options
 | **Option**          | **Description**                                               |
 | ---                 | ---                                                           |
 | `-c`,`--configure`  | Apply system configuration and hardening included in script.  |
-| `-a`,`--aur-helper` | Install preferred AUR helper (yay).                           |
+| `-a`,`--aur-helper` | Install preferred AUR helper (paru).                          |
 | `-h`,`--help`       | Display help message including available options.             |
 
 ## Credits
